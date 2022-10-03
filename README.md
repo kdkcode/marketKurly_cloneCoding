@@ -1,3 +1,7 @@
+# React로 마켓컬리 클론 코딩 연습하는 페이지 입니다.
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
