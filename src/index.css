@@ -1,3 +1,5 @@
+@import 'reset.css';
+
 .page{
     position: absolute;
     top: 0;
@@ -9,7 +11,7 @@
     left: 50%;
     transform: translate(-50%, 0);
 
-    background-color: rgb(180, 101, 101);
+    background-color: rgb(255, 242, 242);
 
     overflow: hidden;
 
@@ -82,7 +84,7 @@
 
 /* 버튼이 활성화되지 않았을 때 */
 .bottomButton:disabled{
-    background-color: #dadada;
+    background-color: yellow;
     color:white;
 }
 
@@ -92,7 +94,7 @@
     width: 250px;
     margin: 16px;
     /* border: 1px solid red; */
-    background-color: #373b69;
+    background-color: #e0e1f4;
     /* 글자색 */
     color: white;
     border-radius: 5px;
@@ -112,7 +114,7 @@
 }
 
 body{
-    background-color: #22254b;
+    background-color: white;
 }
 
 .movie-info{
@@ -131,4 +133,62 @@ body{
 
 .movie-info span{
     margin-left: 3px;
+}
+
+
+/* movie-router */
+.root-wrap{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+.header-container{
+ background-color: rgba(3,3,7,65,1);
+}
+
+.header-wrap{
+    height: 64px;
+    max-width : 1400px;
+    margin: 0 auto;
+
+    border: 1px red solid;
+
+    /* 세로 정렬 */
+
+    display: flex;
+    align-items: center;
+}
+
+.header-left-wrap{
+    display : flex;
+}
+
+.header-left-wrap ul{
+    margin-left: 16px;
+    display: flex;
+}
+
+.header-left-wrap li{
+    margin-right: 14px;
+    padding: 8px;
+}
+
+
+.header-nav-item{
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.page-container{
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 32px 0;
+}
+.movies-container{
+    display: flex;
+    flex-wrap : wrap;
+    justify-content : center;
 }
