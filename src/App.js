@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Login from"./Login";
-import {dummy} from './movieDummy';
+// import {dummy} from './movieDummy';
 import Movie from './components/Movie';
 import Movies from './pages/Movies';
 import Tv from "./pages/Tv";
@@ -12,14 +12,22 @@ import MovieDetail from "./pages/MovieDetail";
 import Help from "./pages/Help";
 import Rules from "./pages/Rules";
 
-
+import styled from "styled-components";
+import {dummy} from "./questionDummy";
+import Question from "./components/Question";
 
 function App() {
   return (
   <div class="root-wrap">
     <BrowserRouter>
       <Header/>
-      <Routes>
+      <RootWrap>
+        {dummy.map((item) => (
+          <Question key={item.idx} title={item.title} questionList={item.questionList}/>
+        ))}
+      </RootWrap>
+
+      {/* <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/movie" element={<Movies />} />
         <Route path="/movie/:title" element={<MovieDetail />} />
@@ -28,7 +36,7 @@ function App() {
         <Route path="/*" element={<NotFound />} />
         <Route path="/help" element={<Help />} />
         <Route path="/rules" element={<Rules />} />
-      </Routes>
+      </Routes> */}
     
     </BrowserRouter>
   </div>
@@ -60,4 +68,16 @@ function App() {
   );
 }
 
-export default App;
+export default App
+
+const RootWrap = styled.div`
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  max-width: 500px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  background-color: white;
+  padding: 20px;
+`; 
