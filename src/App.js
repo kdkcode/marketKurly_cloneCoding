@@ -15,19 +15,20 @@ import Rules from "./pages/Rules";
 import styled from "styled-components";
 import {dummy} from "./questionDummy";
 import Question from "./components/Question";
+import Place from "./components/Place";
 
 function App() {
   return (
   <div class="root-wrap">
     <BrowserRouter>
       <Header/>
-      <RootWrap>
+      {/* <RootWrap>
         {dummy.map((item) => (
           <Question key={item.idx} title={item.title} questionList={item.questionList}/>
         ))}
-      </RootWrap>
+      </RootWrap> */}
 
-      {/* <Routes>
+      <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/movie" element={<Movies />} />
         <Route path="/movie/:title" element={<MovieDetail />} />
@@ -36,7 +37,8 @@ function App() {
         <Route path="/*" element={<NotFound />} />
         <Route path="/help" element={<Help />} />
         <Route path="/rules" element={<Rules />} />
-      </Routes> */}
+        <Route path="/places" element={<Place />} />
+      </Routes>
     
     </BrowserRouter>
   </div>
